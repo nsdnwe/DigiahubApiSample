@@ -11,14 +11,18 @@ using System.Collections.Generic;
 namespace DigiahubApiSample {
     class Program {
 
-        // Replace API_KEY with your api_key OR use "sandbox-mode" for testing.
+        // Use API_KEY "sandbox-mode" for testing.
         // In "sandbox-mode" no changes are saved permanently. Do not send any sensitive data in "sandbox-mode".
+        // In production environment replace API_KEY with your api_key.
+        // Don't post sample data to production environment.
 
-        const string API_KEY = "sandbox-mode";
+        const string API_KEY = "sandbox-modex";
 
         const string BASE_URI = "https://digiahub.com/api/"; 
 
         static void Main(string[] args) {
+
+            if(API_KEY != "sandbox-mode") throw new Exception("Make sure you don't post sample data to production environment, then remove this check.");
 
             // ===============================================================================================
             // Post new resource and use new resource's ID in next calls
