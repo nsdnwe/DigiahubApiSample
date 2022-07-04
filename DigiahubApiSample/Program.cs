@@ -312,8 +312,8 @@ namespace DigiahubApiSample {
     }
 
     public class ApiWorkHistory {
-        public string StartDate { get; set; }       // Required
-        public string EndDate { get; set; }         // Leave empty, if work has not ended
+        public string StartDate { get; set; }       // Required. Use dd.MM.yyyy format. Sample "20.01.2023"
+        public string EndDate { get; set; }         // Leave empty, if work has not ended. Use dd.MM.yyyy format. Sample "20.01.2023"
         public string CompanyName { get; set; }
         public string JobTitle { get; set; }
         public string JobDescription { get; set; }
