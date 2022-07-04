@@ -289,8 +289,6 @@ namespace DigiahubApiSample {
         public bool IsAvailable { get; set; }       // Required
         public string AvailableFrom { get; set; }   // Leave empty if IsAvailable == false. Use dd.MM.yyyy format. Sample "20.01.2023"
         public string PriceRequest { get; set; }    // €/h
-        public string CvFileName { get; set; }      // Leave empty when posting a new resource. Updated by /postResourceFile
-        public string Summary { get; set; }
     }
 
     public class ApiResourceFile {
