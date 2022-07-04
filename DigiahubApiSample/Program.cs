@@ -14,15 +14,14 @@ namespace DigiahubApiSample {
         // Replace API_KEY with your api_key OR use "sandbox-mode" for testing.
         // In "sandbox-mode" no changes are saved permanently. Do not send any sensitive data in "sandbox-mode".
 
-        const string API_KEY = "sandbox-mode"; 
+        const string API_KEY = "sandbox-mode";
 
         const string BASE_URI = "https://digiahub.com/api/"; 
 
         static void Main(string[] args) {
 
             // ===============================================================================================
-            // 
-            // Post new resource and use that in next calls
+            // Post new resource and use new resource's ID in next calls
 
             var newResource = new ApiResource() {
                 Name = "Sample name",
@@ -94,6 +93,14 @@ namespace DigiahubApiSample {
 
             Console.WriteLine("POST /resourceFile");
             Console.WriteLine("New file name: " + newFileName);
+            Console.WriteLine("-------------------------------------------------------");
+
+            // ===============================================================================================
+
+            string resourceFileName = GetResourceFileName(resourceID);
+
+            Console.WriteLine("GET /resourceFile");
+            Console.WriteLine(resourceFileName);
             Console.WriteLine("-------------------------------------------------------");
 
             // ===============================================================================================
@@ -208,6 +215,14 @@ namespace DigiahubApiSample {
                 var request = new RestRequest();
                 request.AddJsonBody(newResourceFile);
                 var response = client.Post<string>(request);
+                return response;
+            }
+        }
+
+        static string GetResourceFileName(string id) {
+            using (var client = createClient("resourceFile/" + id)) {
+                var request = new RestRequest();
+                string response = client.Get<string>(request);
                 return response;
             }
         }
