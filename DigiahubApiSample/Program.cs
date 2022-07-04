@@ -16,7 +16,7 @@ namespace DigiahubApiSample {
         // In production environment replace API_KEY with your api_key.
         // Don't post sample data to production environment.
 
-        const string API_KEY = "sandbox-modex";
+        const string API_KEY = "sandbox-mode";
 
         const string BASE_URI = "https://digiahub.com/api/"; 
 
