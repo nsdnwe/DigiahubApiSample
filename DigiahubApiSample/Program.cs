@@ -11,7 +11,7 @@ using System.Collections.Generic;
 namespace DigiahubApiSample {
     class Program {
 
-        // Replace API_KEY with your api_key (from digiahub.com menu) OR use "sandbox-mode" for testing.
+        // Replace API_KEY with your api_key OR use "sandbox-mode" for testing.
         // In "sandbox-mode" no changes are saved permanently. Do not send any sensitive data in "sandbox-mode".
 
         const string API_KEY = "sandbox-mode"; 
@@ -280,7 +280,7 @@ namespace DigiahubApiSample {
     }
 
     public class ApiResource {
-        public string ID { get; set; }              // Unique id for each resource, guid
+        public string ID { get; set; }              // Unique id for each resource. Leave empty when posting a new resource.
         public string Name { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
