@@ -3,7 +3,7 @@ using RestSharp;
 using System;
 using System.Collections.Generic;
 
-// For more detailed API specification open https://digiahub.com/swagger
+// For more detailed API specification see https://digiahub.com/swagger
 //
 // nuget Install-Package Newtonsoft.Json
 // nuget Install-Package RestSharp
@@ -270,26 +270,26 @@ namespace DigiahubApiSample {
     // ===============================================================================================
 
     public class ApiAvailability {
-        public bool IsAvailable { get; set; }
-        public string AvailableFrom { get; set; }
+        public bool IsAvailable { get; set; }       // Required
+        public string AvailableFrom { get; set; }   // Leave empty if IsAvailable == false. Use dd.MM.yyyy format. Sample "20.01.2023"
     }
 
     public class ApiCompetence {
-        public string CompetenceName { get; set; }
-        public double WorkExperienceYears { get; set; }
+        public string CompetenceName { get; set; }  // Required
+        public double WorkExperienceYears { get; set; } // Required
     }
 
     public class ApiResource {
-        public string ID { get; set; }              // Unique id for each resource. Leave empty when posting a new resource.
-        public string Name { get; set; }
+        public string ID { get; set; }              // Unique id for each resource. Id is created by API. Leave empty when posting a new resource.
+        public string Name { get; set; }            // Required. You can use first name only or initials if you prefer
         public string Phone { get; set; }
         public string Email { get; set; }
         public string Linkedin { get; set; }
         public string Location { get; set; }        // City 
-        public bool IsAvailable { get; set; }
-        public string AvailableFrom { get; set; }   // User dd.MM.yyyy format
+        public bool IsAvailable { get; set; }       // Required
+        public string AvailableFrom { get; set; }   // Leave empty if IsAvailable == false. Use dd.MM.yyyy format. Sample "20.01.2023"
         public string PriceRequest { get; set; }    // €/h
-        public string CvFileName { get; set; }
+        public string CvFileName { get; set; }      // Leave empty when posting a new resource. Updated by /postResourceFile
         public string Summary { get; set; }
     }
 
@@ -299,8 +299,8 @@ namespace DigiahubApiSample {
     }
 
     public class ApiWorkHistory {
-        public string StartDate { get; set; }
-        public string EndDate { get; set; }
+        public string StartDate { get; set; }       // Required
+        public string EndDate { get; set; }         // Leave empty, if work has not ended
         public string CompanyName { get; set; }
         public string JobTitle { get; set; }
         public string JobDescription { get; set; }
