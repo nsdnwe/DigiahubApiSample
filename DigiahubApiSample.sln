@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32510.428
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigiahubApiSample", "DigiahubApiSample\DigiahubApiSample.csproj", "{EE8047F7-33BA-4E8C-97D4-36BFC59E9B62}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{52AD64B1-33F8-4675-9B52-283FD1ACD323}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE8047F7-33BA-4E8C-97D4-36BFC59E9B62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE8047F7-33BA-4E8C-97D4-36BFC59E9B62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE8047F7-33BA-4E8C-97D4-36BFC59E9B62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE8047F7-33BA-4E8C-97D4-36BFC59E9B62}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {040AB7F9-3593-4357-A982-3F0D95D44621}
+	EndGlobalSection
+EndGlobal
